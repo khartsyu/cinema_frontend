@@ -1,0 +1,62 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.app-container {
+  width: 100%;   
+  max-width: 990px;       
+  margin: 0 auto;                       
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px;
+  font-size: 14px;
+  font-family: v.$font;
+  font-weight: 500;
+  color: v.$text-primary;
+  background-color: v.$primary;
+  border-radius: 3px;
+  cursor: pointer; 
+  text-transform: uppercase;
+}
+
+/*.element {
+ // 1. Позиционирование
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 10;
+ 
+ // 2. Блочная модель
+ display: flex;
+ width: 100px;
+ height: 100px;
+ margin: 10px;
+ padding: 20px;
+ 
+ // 3. Типографика
+ font-size: 16px;
+ line-height: 1.5;
+ color: #333;
+ 
+ // 4. Визуальное оформление
+ background-color: #fff;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ 
+ // 5. Прочее
+ opacity: 1;
+ transition: all 0.3s; */

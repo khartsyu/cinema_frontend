@@ -1,0 +1,40 @@
+// ШРИФТЫ 
+$font: "Roboto", Arial, sans-serif;
+
+// ЦВЕТА 
+
+// Основные цвета
+$primary: #16A6AF;      // Основной цвет (акценты, кнопки)
+
+// Фоновые цвета
+$bg: #C76F00;            // Фон
+$bg-dark: #171D24;       // Темный фон зала
+$bg-movie: rgba(241, 235, 230, 0.95);  // фон фильмов
+$bg-day: rgba(255, 255, 255, 0.9);  // фон дней
+$bg-contrast: #FFFFFF;            // Фон контрастный
+
+
+// Цвета текста
+$text-primary: #FFFFFF;   //  текст кнопок (светлый на темном фоне)
+$text-head: #C76F00; // Заголовок
+$text-dark: #000000;      // Основной текст (на светлом фоне)
+$text-weekend: #FF0000; // выходные
+
+// Цвета для мест в зале
+$seat-available: #FFFFFF;      // Свободное обычное место
+$seat-available-vip: #F9953A;  // Свободное VIP место
+$seat-selected: #25C4CE;       // Выбранное место
+$seat-border: #525252;        // рамка
+
+//  БРЕЙКПОИНТЫ 
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1440px;
+
+
+//  СЕТКА ЗАЛА 
+$seat-size: 40px;
+$seat-gap: 8px;
+$screen-width: 80%;
+$screen-height: 8px;

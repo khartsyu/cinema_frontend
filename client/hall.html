@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Идём в кино | Выбор мест</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrap wrap--hall">
+    <header class="header">
+      <div class="header__wrap app-container">
+        <a href="index.html" class="header__logo-link">
+          <img class="header__logo" src="image/logo.png" alt="Логотип: идём в кино">
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="hall-container">
+        <div class="hall__info-wrapper">
+          <div class="hall__info">
+            <h1 class="hall__title">Звёздные войны XXIII: Атака клонированных клонов</h1>
+            <span class="hall__time">Начало сеанса: 18:30</span>
+            <span class="hall__hall">Зал 1</span>
+          </div>
+          <div class="hall__tip">
+            <img class="hall__tip-icon" src="image/hint.png" alt="тапните дважды">
+            <div class="hall__tip-text">
+              Тапните дважды, чтобы увеличить
+            </div>
+          </div>
+        </div>
+        <div class="hall__dark">
+          <div class="hall__screen">
+            <img class="hall__screen--img" src="image/hall.png" alt="экран">
+          </div>
+
+          <div class="hall__scheme" id="hallScheme">
+
+            <!-- Ряд 1 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--free" data-row="1" data-seat="1"></div>
+                <div class="seat seat--free" data-row="1" data-seat="2"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 2 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--taken" data-row="2" data-seat="1"></div>
+                <div class="seat seat--free" data-row="2" data-seat="2"></div>
+                <div class="seat seat--free" data-row="2" data-seat="3"></div>
+                <div class="seat seat--free" data-row="2" data-seat="4"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 3 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--free" data-row="3" data-seat="1"></div>
+                <div class="seat seat--free" data-row="3" data-seat="2"></div>
+                <div class="seat seat--free" data-row="3" data-seat="3"></div>
+                <div class="seat seat--free" data-row="3" data-seat="4"></div>
+                <div class="seat seat--free" data-row="3" data-seat="5"></div>
+                <div class="seat seat--free" data-row="3" data-seat="6"></div>
+                <div class="seat seat--free" data-row="3" data-seat="7"></div>
+                <div class="seat seat--free" data-row="3" data-seat="8"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 4 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="4" data-seat="1"></div>
+                <div class="seat seat--free" data-row="4" data-seat="2"></div>
+                <div class="seat seat--free" data-row="4" data-seat="3"></div>
+                <div class="seat seat--free" data-row="4" data-seat="4"></div>
+                <div class="seat seat--free" data-row="4" data-seat="5"></div>
+                <div class="seat seat--vip" data-row="4" data-seat="6"></div>
+                <div class="seat seat--vip" data-row="4" data-seat="7"></div>
+                <div class="seat seat--free" data-row="4" data-seat="8"></div>
+                <div class="seat seat--free" data-row="4" data-seat="9"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 5 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="5" data-seat="1"></div>
+                <div class="seat seat--free" data-row="5" data-seat="2"></div>
+                <div class="seat seat--free" data-row="5" data-seat="3"></div>
+                <div class="seat seat--free" data-row="5" data-seat="4"></div>
+                <div class="seat seat--vip" data-row="56" data-seat="5"></div>
+                <div class="seat seat--vip" data-row="5" data-seat="6"></div>
+                <div class="seat seat--vip" data-row="5" data-seat="7"></div>
+                <div class="seat seat--vip" data-row="5" data-seat="8"></div>
+                <div class="seat seat--free" data-row="5" data-seat="9"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 6 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="6" data-seat="1"></div>
+                <div class="seat seat--free" data-row="6" data-seat="2"></div>
+                <div class="seat seat--free" data-row="6" data-seat="3"></div>
+                <div class="seat seat--free" data-row="6" data-seat="4"></div>
+                <div class="seat seat--vip" data-row="6" data-seat="5"></div>
+                <div class="seat seat--taken" data-row="6" data-seat="6"></div>
+                <div class="seat seat--taken" data-row="6" data-seat="7"></div>
+                <div class="seat seat--taken" data-row="6" data-seat="8"></div>
+                <div class="seat seat--free" data-row="6" data-seat="9"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 7 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="7" data-seat="1"></div>
+                <div class="seat seat--free" data-row="7" data-seat="2"></div>
+                <div class="seat seat--free" data-row="7" data-seat="3"></div>
+                <div class="seat seat--free" data-row="7" data-seat="4"></div>
+                <div class="seat seat--vip" data-row="7" data-seat="5"></div>
+                <div class="seat seat--taken" data-row="7" data-seat="6"></div>
+                <div class="seat seat--taken" data-row="7" data-seat="7"></div>
+                <div class="seat seat--vip" data-row="7" data-seat="8"></div>
+                <div class="seat seat--free" data-row="7" data-seat="9"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 8 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="8" data-seat="1"></div>
+                <div class="seat seat--free" data-row="8" data-seat="2"></div>
+                <div class="seat seat--free" data-row="8" data-seat="3"></div>
+                <div class="seat seat--free" data-row="8" data-seat="4"></div>
+                <div class="seat seat--free" data-row="8" data-seat="5"></div>
+                <div class="seat seat--selected" data-row="8" data-seat="6"></div>
+                <div class="seat seat--selected" data-row="8" data-seat="7"></div>
+                <div class="seat seat--free" data-row="8" data-seat="8"></div>
+                <div class="seat seat--free" data-row="8" data-seat="9"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+                <div class="seat seat--empty"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 9 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="9" data-seat="1"></div>
+                <div class="seat seat--taken" data-row="9" data-seat="2"></div>
+                <div class="seat seat--free" data-row="9" data-seat="3"></div>
+                <div class="seat seat--taken" data-row="9" data-seat="4"></div>
+                <div class="seat seat--free" data-row="9" data-seat="5"></div>
+                <div class="seat seat--taken" data-row="9" data-seat="6"></div>
+                <div class="seat seat--free" data-row="9" data-seat="7"></div>
+                <div class="seat seat--free" data-row="9" data-seat="8"></div>
+                <div class="seat seat--free" data-row="9" data-seat="9"></div>
+                <div class="seat seat--free" data-row="9" data-seat="10"></div>
+                <div class="seat seat--free" data-row="9" data-seat="11"></div>
+                <div class="seat seat--free" data-row="9" data-seat="12"></div>
+              </div>
+            </div>
+
+            <!-- Ряд 10 -->
+            <div class="hall__row">
+              <div class="hall__seats">
+                <div class="seat seat--free" data-row="10" data-seat="1"></div>
+                <div class="seat seat--free" data-row="10" data-seat="2"></div>
+                <div class="seat seat--free" data-row="10" data-seat="3"></div>
+                <div class="seat seat--free" data-row="10" data-seat="4"></div>
+                <div class="seat seat--free" data-row="10" data-seat="5"></div>
+                <div class="seat seat--taken" data-row="10" data-seat="6"></div>
+                <div class="seat seat--taken" data-row="10" data-seat="7"></div>
+                <div class="seat seat--taken" data-row="10" data-seat="8"></div>
+                <div class="seat seat--free" data-row="10" data-seat="9"></div>
+                <div class="seat seat--free" data-row="10" data-seat="10"></div>
+                <div class="seat seat--free" data-row="10" data-seat="11"></div>
+                <div class="seat seat--free" data-row="10" data-seat="12"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ЛЕГЕНДА -->
+          <div class="hall__legend">
+            <div class="legend__item">
+              <div class="legend__color legend__color--free"></div>
+              <span>Свободно (250 руб)</span>
+            </div>
+            <div class="legend__item">
+              <div class="legend__color legend__color--taken"></div>
+              <span>Занято</span>
+            </div>
+            <div class="legend__item">
+              <div class="legend__color legend__color--vip"></div>
+              <span>Свободно VIP (350 руб)</span>
+            </div>
+            <div class="legend__item">
+              <div class="legend__color legend__color--selected"></div>
+              <span>Выбрано</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- КНОПКА -->
+        <button class="hall__btn button" id="hallBtn">забронировать</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/hall.js"></script>
+</body>
+
+</html>

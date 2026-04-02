@@ -1,0 +1,190 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.hall-container {
+  width: 100%;
+  max-width: 990px;
+  padding: 0 0 30px;
+  margin: 0 auto;
+  background-color: v.$bg-movie;
+}
+
+.hall__info-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: v.$text-dark;
+}
+
+// Информация о фильме
+.hall__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hall__title {
+  margin-bottom: 7px;
+  @include m.highlight;
+}
+
+.hall__time {
+  margin-bottom: 8px;
+  @include m.light;
+}
+
+.hall__hall {
+  @include m.highlight;
+}
+
+.hall__tip {
+  position: relative;
+  text-align: center;
+  max-width: 95px;
+  @include m.light;
+
+  @media (min-width: 1024px) {
+    display: none;
+}
+}
+
+.hall__tip-icon {
+  position: absolute;
+  left: -12px;
+  top: 27px;
+}
+
+// Фон зала и легенды
+.hall__dark {
+  margin-bottom: 30px;
+  padding: 15px 0;
+  background-color: v.$bg-dark;
+}
+
+// Экран
+.hall__screen--img {
+  display: block;
+  width: 284px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+// Схема зала
+.hall__scheme {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 30px;
+}
+
+.hall__row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.hall__row-label {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: v.$text-primary;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+// Сетка мест
+.hall__seats {
+  display: grid;
+  grid-template-columns: repeat(12, 20px);
+  gap: 4px;
+  margin: 0 auto;
+}
+
+// Место
+.seat {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid v.$seat-border;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+// Свободное место
+.seat--free {
+  background-color: v.$seat-available;
+}
+
+// VIP место
+.seat--vip {
+  background-color: v.$seat-available-vip;
+}
+
+// Выбранное место
+.seat--selected {
+  background-color: v.$seat-selected;
+}
+
+// Занятое место
+.seat--taken {
+  background-color: none;
+  cursor: not-allowed;
+}
+
+// Пустое место
+.seat--empty {
+  background-color: transparent;
+  cursor: default;
+  pointer-events: none;
+  border: none;
+}
+
+
+.hall__legend {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 10px 14px;
+}
+
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: v.$text-primary;
+  @include m.light;
+}
+
+.legend__color {
+  width: 22px;
+  height: 22px;
+  border: 1px solid v.$seat-border;
+  border-radius: 4px;
+}
+
+.legend__color--free {
+  background-color: v.$seat-available;
+}
+
+.legend__color--vip {
+  background-color: v.$seat-available-vip;
+}
+
+.legend__color--selected {
+  background-color: v.$seat-selected;
+}
+
+
+.hall__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 57px;
+  min-width: 232px;
+}

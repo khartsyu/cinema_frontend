@@ -1,0 +1,115 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.movie {
+  margin: 0 auto;
+}
+
+.movie__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.movie__card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;    
+  width: 100%;
+  padding: 20px;
+  color: v.$text-dark;
+  border-radius: 2px;
+  background-color: v.$bg-movie;
+}
+
+.movie__column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;       
+}
+
+.movie__row {
+  display: flex;
+  gap: 15px;       
+}
+
+.movie__content {
+  display: flex;
+  gap: 24px;
+}
+
+.movie__poster {
+  flex-shrink: 0;
+  width: 125px;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.movie__info {
+  flex: 1;
+}
+
+.movie__title {
+  margin-bottom: 10px;
+  @include m.highlight;
+}
+
+.movie__description {
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  @include m.text;
+}
+
+.movie__duration {
+  display: inline-block;
+  @include m.light;
+}
+
+.movie__country {
+  display: inline-block;
+  @include m.light;
+}
+
+.movie__sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie__hall {
+  flex: 1;
+}
+
+.movie__hall-name {
+  display: block;
+  margin-bottom: 7px;
+  @include m.highlight;
+}
+
+.movie__time-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie__time-btn {
+  display: inline-block;
+  padding: 8px;
+  font-size: 15px;
+  font-family: v.$font;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: v.$bg-contrast;
+  border-radius: 2px;
+  cursor: pointer;
+}
