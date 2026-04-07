@@ -113,3 +113,11 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
+.movie__time-btn--disabled,
+.movie__time-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #999;
+}

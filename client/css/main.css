@@ -463,6 +463,14 @@ legend {
   cursor: pointer;
 }
 
+.movie__time-btn--disabled,
+.movie__time-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
+}
+
 .hall-container {
   width: 100%;
   max-width: 990px;
