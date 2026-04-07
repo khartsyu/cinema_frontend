@@ -778,6 +778,13 @@ legend {
   height: 200px;
   margin: 0 auto 30px;
 }
+.ticket__qrcode canvas,
+.ticket__qrcode img,
+.ticket__qrcode svg {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
 
 .ticket__info-text {
   display: flex;

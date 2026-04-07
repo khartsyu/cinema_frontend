@@ -27,30 +27,31 @@
         <div class="payment__info">
           <div class="payment__row">
             <span class="payment__label">На фильм:</span>
-            <span class="payment__value">Звёздные войны XXIII: Атака клонированных клонов</span>
+            <span class="payment__value" id="bookingFilm">Звёздные войны XXIII: Атака клонированных клонов</span>
           </div>
           <div class="payment__row">
             <span class="payment__label">Места:</span>
-            <span class="payment__value">6, 7</span>
+            <span class="payment__value" id="bookingSeats">6, 7</span>
           </div>
           <div class="payment__row">
             <span class="payment__label">В зале:</span>
-            <span class="payment__value">1</span>
+            <span class="payment__value" id="bookingHall">1</span>
           </div>
           <div class="payment__row">
             <span class="payment__label">Начало сеанса:</span>
-            <span class="payment__value">18:30</span>
+            <span class="payment__value" id="bookingTime">18:30</span>
           </div>
           <div class="payment__row">
             <span class="payment__label">Стоимость:</span>
-            <span class="payment__value">600 рублей</span>
+            <span class="payment__value" id="bookingPrice">600 рублей</span>
           </div>
         </div>
 
         <button class="payment__btn button" id="paymentBtn">Получить код бронирования</button>
 
         <p class="payment__info-text">
-          <span>После оплаты билет будет доступен в этом окне, а также придёт вам на почту. Покажите QR-код нашему контроллёру у входа в зал.</span>
+          <span>После оплаты билет будет доступен в этом окне, а также придёт вам на почту. Покажите QR-код нашему
+            контроллёру у входа в зал.</span>
           <span>Приятного просмотра!</span>
         </p>
       </div>
@@ -58,6 +59,7 @@
     </main>
   </div>
 
+  <script src="js/api.js"></script>
   <script src="js/payment.js"></script>
 </body>
 

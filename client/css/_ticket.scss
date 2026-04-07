@@ -2,7 +2,7 @@
 @use "./mixins" as m;
 
 .ticket__img {
-display: block;
+  display: block;
   width: 100%;
   max-width: 990px;
   margin: 0 auto;
@@ -55,6 +55,14 @@ display: block;
   width: 200px;
   height: 200px;
   margin: 0 auto 30px;
+
+  canvas,
+  img,
+  svg {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .ticket__info-text {

@@ -1,0 +1,14 @@
+
+*.css.map
+*.map
+
+
+.DS_Store
+Thumbs.db
+
+
+.vscode/
+.idea/
+
+
+*.log
