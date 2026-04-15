@@ -213,6 +213,7 @@ legend {
   border-radius: 3px;
   cursor: pointer;
   text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*.element {
@@ -560,17 +561,6 @@ legend {
   gap: 0;
 }
 
-.hall__row-label {
-  width: 40px;
-  text-align: center;
-  font-weight: bold;
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px 0;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
 .hall__seats {
   display: grid;
   grid-template-columns: repeat(12, 20px);
@@ -648,6 +638,7 @@ legend {
 
 .legend__color--selected {
   background-color: #25C4CE;
+  box-shadow: 0 0 10px rgba(22, 166, 175, 0.9);
 }
 
 .hall__btn {

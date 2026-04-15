@@ -1,0 +1,7 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.price-form__text {
+  color: v.$text-annotation;
+  @include m.text;
+}

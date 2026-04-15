@@ -1,0 +1,31 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.admin__header {
+  position: relative;
+  box-sizing: border-box;
+  padding: 14px 104px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 990px;
+  z-index: 20;
+}
+
+.admin__logo-link {
+  display: block;
+}
+
+.admin__logo {
+  display: block;
+  width: 212px;
+  height: auto;
+}
+
+.admin__header-text {
+  font-family: v.$font;
+  font-weight: 400;
+  font-size: 10px;
+  color: v.$text-primary;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}

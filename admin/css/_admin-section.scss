@@ -1,0 +1,118 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.admin-section {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 962px;
+  z-index: 20;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    padding-bottom: 0;
+  }
+}
+
+.admin-section::before {
+  content: "";
+  position: absolute;
+  left: 61px;
+  width: 2px;
+  height: 100%;
+  background-color: v.$primary-border;
+  z-index: 22;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    display: none;
+  }
+}
+
+.admin-section:first-child:before {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 61px;
+  width: 2px;
+  height: 100%;
+  background-color: v.$primary-border;
+  z-index: 22;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    display: none;
+  }
+}
+
+.admin-section:last-child:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 61px;
+  width: 2px;
+  height: 45px;
+  background-color: v.$primary-border;
+  z-index: 22;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    display: none;
+  }
+}
+
+.admin-section__title {
+  position: relative;
+  padding: 35px 42px 35px 104px;
+  color: v.$text-primary;
+  background-color: v.$primary-header;
+  text-transform: uppercase;
+  @include m.head;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    padding: 20px 67px;
+  }
+}
+
+.admin-section__before {
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  display: block;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  border: 4px solid v.$primary-border;
+  background-color: v.$bg-contrast;
+  z-index: 25;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    top: 22px;
+    left: 20px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.admin-section__deploy {
+  position: absolute;
+  top: 40px;
+  right: 42px;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    top: 25px;
+    right: 32px;
+  }
+}
+
+.admin-section__content {
+  padding: 35px 67px 35px 104px;
+  background-color: v.$bg-login;
+
+  @media (max-width: #{v.$tablet - 1px}) {
+    padding: 35px 67px 35px 31px;
+  }
+}
+
+.admin-section__text {
+  color: v.$text-dark;
+  @include m.text;
+}

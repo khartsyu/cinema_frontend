@@ -1,0 +1,93 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100vh;
+  background-color: v.$bg;
+  background: image-set(url("../image/fill@1x.jpg") type("image/jpg") 1x,
+      url("../image/fill@2x.jpg") type("image/jpg") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: v.$bg-dark;
+  z-index: 1010;
+}
+
+.popup-container {
+  background-color: v.$bg-login;
+  width: 100%;
+  max-width: 960px;
+  z-index: 1020;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 42px 15px;
+  color: v.$text-primary;
+  background-color: v.$primary-header;
+  text-transform: uppercase;
+  @include m.head;
+}
+
+.popup-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-body {
+  padding: 16px 10px;
+
+  @media (min-width: v.$tablet) {
+    padding: 34px 10px;
+  }
+
+  @media (min-width: v.$desktop) {
+    padding: 34px 105px;
+  }
+}
+
+.popup-field {
+  font-family: v.$font;
+  font-weight: 400;
+  color: v.$text-annotation;
+  margin-bottom: 8px;
+}
+
+.popup-field-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.popup-field-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background-color: v.$bg-contrast;
+  border: 1px solid v.$text-annotation2;
+}
+
+.popup-actions {
+  text-align: center;
+  margin-top: 34px;
+}

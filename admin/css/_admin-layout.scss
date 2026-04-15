@@ -1,0 +1,12 @@
+.admin-section__content {
+    transition: all 0.3s ease;
+}
+
+.admin-section__content.collapsed {
+    display: none;
+}
+
+.admin-section__deploy.rotated img {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}

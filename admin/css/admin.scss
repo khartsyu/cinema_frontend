@@ -1,0 +1,20 @@
+@use "./reset";
+@use "./fonts";
+@use "./variables" as v;
+@use "./mixins" as m;
+
+@use "./_wrap.scss";
+@use "./_utils.scss";
+
+@use "./_login.scss";
+@use "./_admin-header.scss";
+@use "./_admin-section.scss";
+@use "./_halls.scss";
+@use "./_config.scss";
+@use "./_seats.scss";
+@use "./_price.scss";
+@use "./_sale.scss";
+@use "./_film.scss";
+@use "./_timeline.scss";
+@use "./_popup.scss";
+@use "_admin-layout.scss";

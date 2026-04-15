@@ -1,0 +1,59 @@
+// ШРИФТЫ 
+$font: "Roboto", Arial, sans-serif;
+
+// ЦВЕТА 
+
+// Основные цвета
+$primary: #16A6AF; // Основной цвет (акценты, кнопки)
+$primary-header: #63536C; // Основной цвет заголовков
+
+
+$primary-border: #BC95D6; // Рамки акцентные
+$border-form: #B7B7B7; // Рамка формы
+
+
+// Фоновые цвета
+$bg: #000000; // Фон
+$bg-dark: rgba(0, 0, 0, 0.5); // Затемнение изображения
+$bg-login: rgba(234, 233, 235, 0.95); // фон логина
+$bg-contrast: #FFFFFF; // Фон контрастный
+$bg-radio: rgba(255, 255, 255, 0.45); // Неактивная радиокнопка 
+
+// Цвета текста
+$text-primary: #FFFFFF; //  текст заголовков (светлый на темном фоне)
+$text-btn: #63536C; // текст кнопок
+$text-dark: #000000; // Основной текст (на светлом фоне)
+$text-annotation: #848484; // Пояснения
+$text-annotation2: #757575; // Пояснения при заполнении полей ввода
+
+
+// Цвета для мест в зале
+$seat-border: #000000; // рамка зала
+$seat-available: #C4C4C4; // обычное место
+$seat-available-vip: #B0D6D8; // VIP место
+$seat-border: #393939; // рамка
+$seat-border-vip: #0A828A; // рамка VIP
+
+// Цвета фильмов
+$timeline-border: rgba(0, 0, 0, 0.3); //рамка
+$film-time: rgba(0, 0, 0, 0.7); // время
+$timeline-border: #848484; // рамка временной ленты
+$timeline-time: #848484; // время
+$film1: #CAFF85;
+$film2: #85FF89;
+$film3: #85FFD3;
+$film4: #8599FF;
+$film5: #8599FF;
+
+//  БРЕЙКПОИНТЫ 
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1440px;
+
+
+//  СЕТКА ЗАЛА 
+$seat-size: 26px;
+$seat-gap: 10px;
+$screen-width: 80%;
+$screen-height: 8px;
