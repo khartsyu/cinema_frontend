@@ -1,4 +1,4 @@
-https://github.com/khartsyu/cinema_frontend
+https://khartsyu.github.io/cinema_frontend/
 
 
 В своей дипломной работе мною были использованы следующие технологии:\
