@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loginBtn = document.getElementById('loginBtn');
     if (loginBtn) {
         loginBtn.addEventListener('click', () => {
-            window.location.href = '../admin/login.html';
+            window.location.href = 'admin/login.html';
         });
     }
 
