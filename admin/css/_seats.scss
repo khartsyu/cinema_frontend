@@ -1,0 +1,79 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.seats-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin: 11px 0;
+  color: v.$text-annotation;
+  @include m.text;
+}
+
+.seats-legend-item {
+  display: flex;
+  gap: 3px;
+  max-height: 26px;
+}
+
+.seats {
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+}
+
+.seats--standart {
+  background-color: v.$seat-available;
+  border: 1px solid v.$seat-border;
+}
+
+.seats--vip {
+  background-color: v.$seat-available-vip;
+  border: 1px solid v.$seat-border-vip;
+}
+
+.seats--disabled {
+  border: 1px solid v.$seat-available;
+}
+
+.seats-hint {
+  color: v.$text-annotation;
+  @include m.text;
+}
+
+.seats-hall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 26px 36px 36px;
+  border: 1px solid v.$seat-border;
+}
+
+.seats-scheme {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seats-text {
+  color: v.$text-dark;
+  letter-spacing: 19px;
+  text-transform: uppercase;
+  @include m.text;
+}
+
+.seats-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.seats-seats {
+  display: grid;
+  grid-template-columns: repeat(10, 26px);
+  gap: 10px;
+  margin: 0 auto;
+}

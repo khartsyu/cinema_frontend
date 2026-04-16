@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Идем в кино | Администраторская</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="dark"></div>
+    <header class="admin__header">
+      <a href="index.html" class="admin__logo-link">
+        <img class="admin__logo" src="image/logo.png" alt="Логотип: идём в кино">
+        <span class="admin__header-text">Администраторррская</span>
+      </a>
+    </header>
+
+    <main class="admin-main">
+
+      <section class="admin-section">
+        <h2 class="admin-section__title">Управление залами</h2>
+        <div class="admin-section__before"></div>
+        <button class="admin-section__deploy">
+          <img src="image/deploy.png" alt="стрелка развернуть блок">
+        </button>
+        <div class="admin-section__content">
+          <p class="admin-section__text">Доступные залы:</p>
+          <ul class="admin-section__halls-list">
+            <li class="hall-tag">
+              <span>- Зал 1</span>
+              <button class="hall-delete">
+                <img src="image/trash.png" alt="корзина">
+              </button>
+            </li>
+            <li class="hall-tag">
+              <span>- Зал 2</span>
+              <button class="hall-delete">
+                <img src="image/trash.png" alt="корзина">
+              </button>
+            </li>
+          </ul>
+          <button class="button">Создать зал</button>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="admin-section__title">Конфигурация залов</h2>
+        <div class="admin-section__before"></div>
+        <button class="admin-section__deploy">
+          <img src="image/deploy.png" alt="стрелка развернуть блок">
+        </button>
+        <div class="admin-section__content">
+          <div class="config-form">
+            <div class="config-form__field">
+              <span class="config-form__label">Выберите зал для конфигурации:</span>
+              <div class="hall-radio">
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="1" checked class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 1</span>
+                </label>
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="2" class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 2</span>
+                </label>
+              </div>
+            </div>
+
+            <span class="config-form__label">Укажите количество рядов и максимальное количество кресел в ряду:</span>
+            <div class="config-form__row">
+              <div class="config-form__field">
+                <label class="config-form__annotation">Рядов, шт</label>
+                <input type="number" value="10" class="config-form__input" id="rowsCount">
+              </div>
+              <span class="config-form__row-text">X</span>
+              <div class="config-form__field">
+                <label class="config-form__annotation">Мест, шт</label>
+                <input type="number" value="8" class="config-form__input" id="placesCount">
+              </div>
+            </div>
+
+            <span class="config-form__label">Теперь вы можете указать типы кресел на схеме зала:</span>
+            <ul class="seats-legend">
+              <li class="seats-legend-item">
+                <span class="seats seats--standart"></span>
+                <span class="seats-legend__text"> — обычные кресла</span>
+              </li>
+              <li class="seats-legend-item">
+                <span class="seats seats--vip"></span>
+                <span class="seats-legend__text"> — VIP кресла</span>
+              </li>
+              <li class="seats-legend-item">
+                <span class="seats seats--disabled"></span>
+                <span class="seats-legend__text"> — заблокированные (нет кресла)</span>
+              </li>
+            </ul>
+            <p class="seats-hint">Чтобы изменить вид кресла, нажмите по нему левой кнопкой мыши</p>
+
+            <div class="seats-hall">
+              <span class="seats-text">экран</span>
+              <div class="seats-scheme" id="seatsScheme">
+
+                <!-- Ряд 1 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--standart" data-row="1" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="1" data-seats="2"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 2 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--standart" data-row="2" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="2" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="2" data-seats="3"></div>
+                    <div class="seats seats--standart" data-row="2" data-seats="4"></div>
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 3 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--disabled"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="3"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="4"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="5"></div>
+                    <div class="seats seats--standart" data-row="3" data-seats="6"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 4 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="4" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="4" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="4" data-seats="3"></div>
+                    <div class="seats seats--vip" data-row="4" data-seats="4"></div>
+                    <div class="seats seats--vip" data-row="4" data-seats="5"></div>
+                    <div class="seats seats--standart" data-row="4" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="4" data-seats="7"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 5 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="5" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="5" data-seats="2"></div>
+                    <div class="seats seats--vip" data-row="5" data-seats="3"></div>
+                    <div class="seats seats--vip" data-row="5" data-seats="4"></div>
+                    <div class="seats seats--vip" data-row="5" data-seats="5"></div>
+                    <div class="seats seats--vip" data-row="5" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="5" data-seats="7"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 6 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="6" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="6" data-seats="2"></div>
+                    <div class="seats seats--vip" data-row="6" data-seats="3"></div>
+                    <div class="seats seats--vip" data-row="6" data-seats="4"></div>
+                    <div class="seats seats--vip" data-row="6" data-seats="5"></div>
+                    <div class="seats seats--vip" data-row="6" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="6" data-seats="7"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 7 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="7" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="7" data-seats="2"></div>
+                    <div class="seats seats--vip" data-row="7" data-seats="3"></div>
+                    <div class="seats seats--vip" data-row="7" data-seats="4"></div>
+                    <div class="seats seats--vip" data-row="7" data-seats="5"></div>
+                    <div class="seats seats--vip" data-row="7" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="7" data-seats="7"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 8 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="8" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="3"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="4"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="5"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="8" data-seats="7"></div>
+                    <div class="seats seats--disabled"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 9 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="9" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="3"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="4"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="5"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="7"></div>
+                    <div class="seats seats--standart" data-row="9" data-seats="8"></div>
+                  </div>
+                </div>
+
+
+                <!-- Ряд 10 -->
+                <div class="seats-row">
+                  <div class="seats-seats">
+                    <div class="seats seats--standart" data-row="10" data-seats="1"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="2"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="3"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="4"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="5"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="6"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="7"></div>
+                    <div class="seats seats--standart" data-row="10" data-seats="8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="config-form__actions">
+              <button class="button button--cancel">Отмена</button>
+              <button class="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="admin-section__title">Конфигурация цен</h2>
+        <div class="admin-section__before"></div>
+        <button class="admin-section__deploy">
+          <img src="image/deploy.png" alt="стрелка развернуть блок">
+        </button>
+        <div class="admin-section__content">
+          <div class="price-form">
+            <div class="config-form__field">
+              <span class="config-form__label">Выберите зал для конфигурации:</span>
+              <div class="hall-radio">
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="1" checked class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 1</span>
+                </label>
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="2" class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 2</span>
+                </label>
+              </div>
+            </div>
+
+            <span class="config-form__label">Установите цены для типов кресел:</span>
+            <div class="config-form__double-col">
+              <div class="config-form__col">
+                <div class="config-form__field">
+                  <label class="config-form__annotation">Цена, рублей</label>
+                  <input type="number" value="0" class="config-form__input">
+                </div>
+                <div class="config-form__field">
+                  <label class="config-form__annotation">Цена, рублей</label>
+                  <input type="number" value="350" class="config-form__input">
+                </div>
+              </div>
+
+              <div class="config-form__col">
+                <div class="config-form__field-wrap">
+                  <span class="price-form__text">за</span>
+                  <span class="seats seats--standart"></span>
+                  <span class="price-form__text">обычные кресла</span>
+                </div>
+
+                <div class="config-form__field-wrap">
+                  <span class="price-form__text">за</span>
+                  <span class="seats seats--vip"></span>
+                  <span class="price-form__text">VIP кресла</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="config-form__actions">
+              <button class="button button--cancel">Отмена</button>
+              <button class="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="admin-section__title">Сетка сеансов</h2>
+        <div class="admin-section__before"></div>
+        <button class="admin-section__deploy">
+          <img src="image/deploy.png" alt="стрелка развернуть блок">
+        </button>
+        <div class="admin-section__content">
+          <div class="films-list">
+            <button class="button" id="addFilmBtn">Добавить фильм</button>
+            <ul class="films-list__items">
+              <li class="film-card" data-film-id="1" draggable="true">
+                <img class="film-card__img" src="image/poster1.jpg" alt="Постер фильма">
+                <div class="film-card__info">
+                  <span class="film-card__title">Звёздные войны XXIII: Атака клонированных клонов</span>
+                  <span class="film-card__duration">130 минут</span>
+                </div>
+                <button class="film-delete">
+                  <img src="image/trash.png" alt="корзина">
+                </button>
+              </li>
+              <li class="film-card" data-film-id="2" draggable="true">
+                <img class="film-card__img" src="image/poster1.jpg" alt="Постер фильма">
+                <div class="film-card__info">
+                  <span class="film-card__title">Миссия выполнима</span>
+                  <span class="film-card__duration">120 минут</span>
+                  <button class="film-delete">
+                    <img src="image/trash.png" alt="корзина">
+                  </button>
+                </div>
+              </li>
+              <li class="film-card" data-film-id="3" draggable="true">
+                <img class="film-card__img" src="image/poster1.jpg" alt="Постер фильма">
+                <div class="film-card__info">
+                  <span class="film-card__title">Серая пантера</span>
+                  <span class="film-card__duration">90 минут</span>
+                  <button class="film-delete">
+                    <img src="image/trash.png" alt="корзина">
+                  </button>
+                </div>
+              </li>
+              <li class="film-card" data-film-id="4" draggable="true">
+                <img class="film-card__img" src="image/poster1.jpg" alt="Постер фильма">
+                <div class="film-card__info">
+                  <span class="film-card__title">Движение вбок</span>
+                  <span class="film-card__duration">95 минут</span>
+                  <button class="film-delete">
+                    <img src="image/trash.png" alt="корзина">
+                  </button>
+                </div>
+              </li>
+              <li class="film-card" data-film-id="5" draggable="true">
+                <img class="film-card__img" src="image/poster1.jpg" alt="Постер фильма">
+                <div class="film-card__info">
+                  <span class="film-card__title">Кот Да Винчи</span>
+                  <span class="film-card__duration">100 минут</span>
+                  <button class="film-delete">
+                    <img src="image/trash.png" alt="корзина">
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__hall">
+              <h3 class="timeline__hall-title">Зал 1</h3>
+              <div class="timeline__track">
+                <div class="timeline__seances" id="timelineSeances1">
+                  <div class="seance-card" draggable="true">Миссия выполнима</div>
+                  <div class="seance-card" draggable="true">Миссия выполнима</div>
+                  <div class="seance-card" draggable="true">Звёздные войны</div>
+                </div>
+                <div class="timeline__times" id="timelineTimes1">
+                  <div class="timeline__time">00:00</div>
+                  <div class="timeline__time">12:00</div>
+                  <div class="timeline__time">14:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-actions">
+            <button class="button button--cancel">Отмена</button>
+            <button class="button">Сохранить</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="admin-section__title">Открыть продажи</h2>
+        <div class="admin-section__before"></div>
+        <button class="admin-section__deploy">
+          <img src="image/deploy.png" alt="стрелка развернуть блок">
+        </button>
+        <div class="admin-section__content">
+          <div class="sale-form">
+            <div class="config-form__field">
+              <span class="config-form__label">Выберите зал для открытия/закрытия продаж:</span>
+              <div class="hall-radio">
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="1" checked class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 1</span>
+                </label>
+                <label class="hall-radio__item">
+                  <input type="radio" name="hallConfig" value="2" class="hall-radio__input">
+                  <span class="hall-radio__text">Зал 2</span>
+                </label>
+              </div>
+            </div>
+            <span class="sale-form__text">Всё готово к открытию</span>
+            <button class="button sale-form__btn">Открыть продажу билетов</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+
+  <!-- Popup для зала -->
+  <div class="popup-overlay" id="popupHallOverlay" style="display: none;">
+    <div class="popup-container">
+      <div class="popup-header">
+        <h3 class="popup-title">Добавление зала</h3>
+        <button class="popup-close" data-popup="hall">
+          <img src="image/close.png" alt="крестик закрыть блок">
+        </button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-field">
+          <label class="popup-field-label">Название зала</label>
+          <input class="popup-field-input" type="text" id="hallName" placeholder="Например: Зал 1">
+        </div>
+        <div class="popup-actions">
+          <button class="button" id="submitHallBtn">Добавить зал</button>
+          <button class="button button--cancel" data-popup="hall">Отменить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup для фильма -->
+  <div class="popup-overlay" id="popupFilmOverlay" style="display: none;">
+    <div class="popup-dark"></div>
+    <div class="popup-container">
+      <div class="popup-header">
+        <h3 class="popup-title" id="popupTitle">Добавление фильма</h3>
+        <button class="popup-close" id="popupClose">
+          <img src="image/close.png" alt="крестик закрыть блок">
+        </button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-field">
+          <label class="popup-field-label">Название фильма</label>
+          <input class="popup-field-input" type="text" id="filmName" placeholder="Например: Гражданин Кейн">
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label">Продолжительность фильма (мин.)</label>
+          <input class="popup-field-input" type="number" id="filmDuration">
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label">Описание фильма</label>
+          <textarea class="popup-field-input" id="filmDescription"></textarea>
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label">Страна</label>
+          <input class="popup-field-input" type="text" id="filmOrigin">
+        </div>
+        <div class="popup-actions">
+          <button class="button" id="submitFilmBtn">Добавить фильм</button>
+          <button class="button" id="uploadPosterBtn">Загрузить постер</button>
+          <button class="button button--cancel" data-popup="film">Отменить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup для сеанса -->
+  <div class="popup-overlay" id="popupSeanceOverlay" style="display: none;">
+    <div class="popup-dark"></div>
+    <div class="popup-container">
+      <div class="popup-header">
+        <h3 class="popup-title">Добавление сеанса</h3>
+        <button class="popup-close" data-popup="seance">
+          <img src="image/close.png" alt="крестик закрыть блок">
+        </button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-field">
+          <label class="popup-field-label">Название зала</label>
+          <select class="popup-field-input" id="seanceHallid">
+            <option value="">Выберите зал</option>
+          </select>
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label">Название фильма</label>
+          <select class="popup-field-input" id="seanceFilmid">
+            <option value="">Выберите фильм</option>
+          </select>
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label">Время начала</label>
+          <input class="popup-field-input" type="time" id="seanceTime" step="60" value="12:00">
+        </div>
+        <div class="popup-actions">
+          <button class="button" id="submitSeanceBtn">Добавить сеанс</button>
+          <button class="button button--cancel" data-popup="seance">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="./js/admin.js"></script>
+</body>
+
+</html>

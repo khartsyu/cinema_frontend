@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Идем в кино | Вход в администраторскую</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div class="wrap wrap--login">
+        <div class="dark"></div>
+        <header class="login__header">
+            <a href="login.html" class="login__logo-link">
+                <img class="login__logo" src="image/logo.png" alt="Логотип: идём в кино">
+                <span class="login__header-text">Администраторррская</span>
+            </a>
+        </header>
+
+        <div class="login-container">
+            <h1 class="login__title">Авторизация</h1>
+            <form id="loginForm" class="login__form">
+                <div class="login__field">
+                    <label for="login">E-mail</label>
+                    <input type="text" id="login" name="login" required placeholder="example@domain.xyz">
+
+                </div>
+                <div class="login__field">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login__button button">Авторизоваться</button>
+            </form>
+            <div id="errorMessage" class="login__error"></div>
+        </div>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
