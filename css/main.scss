@@ -1,0 +1,14 @@
+@use "./reset";
+@use "./fonts";
+@use "./variables" as v;
+@use "./mixins" as m;
+
+@use "./_wrap.scss";
+@use "./_utils.scss";
+
+@use "./_header.scss";
+@use "./_date.scss";
+@use "./_movie.scss";
+@use "./_hall.scss";
+@use "./_payment.scss";
+@use "./_ticket.scss";

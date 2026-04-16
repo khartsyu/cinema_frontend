@@ -1,0 +1,66 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.payment__img {
+display: block;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.payment__title {
+  display: block;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 25px 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: v.$text-head;
+  background-color: v.$bg-movie;
+  text-transform: uppercase;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  background-color: v.$bg-movie;
+  color: v.$text-dark;
+}
+
+.payment__info {
+  padding: 20px 15px 30px;
+}
+
+.payment__row {
+  margin-bottom: 10px;
+}
+
+.payment__row:last-child {
+  margin-bottom: 0;
+}
+
+.payment__label {
+  width: 140px;
+  @include m.text;
+}
+
+.payment__value {
+  @include m.highlight;
+}
+
+.payment__btn {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 57px;
+}
+
+.payment__info-text {
+  display: flex;
+  gap: 10px;
+  padding: 0 15px 30px;
+  flex-direction: column;
+  line-height: 1.2;
+  @include m.light;
+}

@@ -1,0 +1,33 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.header {
+  box-sizing: border-box;
+  padding: 14px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 990px;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header__logo-link {
+  display: block;
+}
+
+.header__logo {
+  width: 212px;
+  height: auto;
+  display: block;
+}
+
+.header__button {
+  width: 71px;
+  height: 40px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Идём в кино | Электронный билет</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrap wrap--ticket">
+    <header class="header">
+      <div class="header__wrap app-container">
+        <a href="index.html" class="header__logo-link">
+          <img class="header__logo" src="image/logo.png" alt="Логотип: идём в кино">
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <img class="ticket__img" src="image/ticket__before.png" alt="край билета">
+      <h2 class="ticket__title">Электронный билет</h2>
+      <img class="ticket__img" src="image/ticket__after.png" alt="край билета">
+      <img class="ticket__img" src="image/ticket__before.png" alt="край билета">
+      <div class="ticket-container">
+        <div class="ticket__info">
+          <div class="ticket__row">
+            <span class="ticket__label">На фильм:</span>
+            <span class="ticket__value" id="ticketFilm">Звёздные войны XXIII: Атака клонированных клонов</span>
+          </div>
+          <div class="ticket__row">
+            <span class="ticket__label">Места:</span>
+            <span class="ticket__value" id="ticketSeats">6, 7</span>
+          </div>
+          <div class="ticket__row">
+            <span class="ticket__label">В зале:</span>
+            <span class="ticket__value" id="ticketHall">1</span>
+          </div>
+          <div class="ticket__row">
+            <span class="ticket__label">Начало сеанса:</span>
+            <span class="ticket__value" id="ticketDateTime">18:30</span>
+          </div>
+          <div class="ticket__row">
+            <span class="ticket__label">Стоимость:</span>
+            <span class="ticket__value" id="ticketPrice">600 рублей</span>
+          </div>
+        </div>
+
+        <div class="ticket__qrcode" id="qrcode"></div>
+
+        <p class="ticket__info-text">
+          <span>Билет действителен строго на свой сеанс.</span>
+          <span>Покажите QR-код нашему контроллеру для подтверждения бронирования.</span>
+          <span>Приятного просмотра!</span>
+        </p>
+      </div>
+      <img class="ticket__img" src="image/ticket__after.png" alt="край билета">
+    </main>
+  </div>
+
+  <script src="js/QRCreator.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ticket.js"></script>
+</body>
+
+</html>

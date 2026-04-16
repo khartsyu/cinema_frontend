@@ -1,0 +1,31 @@
+@use "./variables" as v;
+
+.wrap {
+  width: 100%;
+  background-color: v.$bg;
+  background: image-set(url("../image/fill@1x.jpg") type("image/jpg") 1x,
+      url("../image/fill@2x.jpg") type("image/jpg") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: v.$font;
+  font-size: 16px;
+  line-height: 1.4;
+  color: v.$text-primary;
+}
+
+.wrap--hall {
+  padding-bottom: 186px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;  
+}
+}
+
+.wrap--ticket {
+  padding-bottom: 321px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;  
+}
+}

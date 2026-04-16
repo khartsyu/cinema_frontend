@@ -1,0 +1,44 @@
+@use "./variables" as v;
+
+
+@mixin highlight() {
+  font-family: v.$font;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@mixin text() {
+  font-family: v.$font;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin light() {
+  font-family: v.$font;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@mixin mobile {
+  @media (min-width: v.$mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{v.$tablet - 1px}) {
+    @content;
+  }
+}

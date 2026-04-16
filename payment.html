@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Идём в кино | Оформление билетов</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="header__wrap app-container">
+        <a href="index.html" class="header__logo-link">
+          <img class="header__logo" src="image/logo.png" alt="Логотип: идём в кино">
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <img class="payment__img" src="image/ticket__before.png" alt="край билета">
+      <h2 class="payment__title">Вы выбрали билеты:</h2>
+      <img class="payment__img" src="image/ticket__after.png" alt="край билета">
+      <img class="payment__img" src="image/ticket__before.png" alt="край билета">
+      <div class="payment-container">
+        <div class="payment__info">
+          <div class="payment__row">
+            <span class="payment__label">На фильм:</span>
+            <span class="payment__value" id="bookingFilm">Звёздные войны XXIII: Атака клонированных клонов</span>
+          </div>
+          <div class="payment__row">
+            <span class="payment__label">Места:</span>
+            <span class="payment__value" id="bookingSeats">6, 7</span>
+          </div>
+          <div class="payment__row">
+            <span class="payment__label">В зале:</span>
+            <span class="payment__value" id="bookingHall">1</span>
+          </div>
+          <div class="payment__row">
+            <span class="payment__label">Начало сеанса:</span>
+            <span class="payment__value" id="bookingTime">18:30</span>
+          </div>
+          <div class="payment__row">
+            <span class="payment__label">Стоимость:</span>
+            <span class="payment__value" id="bookingPrice">600 рублей</span>
+          </div>
+        </div>
+
+        <button class="payment__btn button" id="paymentBtn">Получить код бронирования</button>
+
+        <p class="payment__info-text">
+          <span>После оплаты билет будет доступен в этом окне, а также придёт вам на почту. Покажите QR-код нашему
+            контроллёру у входа в зал.</span>
+          <span>Приятного просмотра!</span>
+        </p>
+      </div>
+      <img class="payment__img" src="image/ticket__after.png" alt="край билета">
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/payment.js"></script>
+</body>
+
+</html>
