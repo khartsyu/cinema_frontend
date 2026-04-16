@@ -258,5 +258,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderDates();
     renderMovies();
 
+    const loginBtn = document.getElementById('loginBtn');
+    if (loginBtn) {
+        loginBtn.addEventListener('click', () => {
+            window.location.href = '../admin/login.html';
+        });
+    }
+
     console.log('Инициализация завершена');
 });
