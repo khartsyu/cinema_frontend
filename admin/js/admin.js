@@ -411,22 +411,46 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // ===== СОХРАНЕНИЕ КОНФИГУРАЦИИ ЗАЛА =====
     const saveConfigBtn = document.querySelector('.config-form .config-form__actions .button:last-child');
-    if (saveConfigBtn) {
-        saveConfigBtn.addEventListener('click', async () => {
-            const rowsInput = document.getElementById('rowsCount');
-            const placesInput = document.getElementById('placesCount');
+if (saveConfigBtn) {
+    saveConfigBtn.addEventListener('click', async () => {
+        const rowsInput = document.getElementById('rowsCount');
+        const placesInput = document.getElementById('placesCount');
 
-            const rows = parseInt(rowsInput?.value) || 10;
-            const places = parseInt(placesInput?.value) || 8;
+        const rowsValue = rowsInput?.value;
+        const placesValue = placesInput?.value;
 
-            if (rows <= 0) {
-                alert('Количество рядов должно быть больше 0');
-                return;
-            }
-            if (places <= 0) {
-                alert('Количество мест в ряду должно быть больше 0');
-                return;
-            }
+        // Проверка на пустое значение
+        if (!rowsValue || rowsValue.trim() === '') {
+            alert('Введите количество рядов');
+            return;
+        }
+        if (!placesValue || placesValue.trim() === '') {
+            alert('Введите количество мест в ряду');
+            return;
+        }
+
+        const rows = parseInt(rowsValue);
+        const places = parseInt(placesValue);
+
+        // Проверка, что это число
+        if (isNaN(rows)) {
+            alert('Количество рядов должно быть числом');
+            return;
+        }
+        if (isNaN(places)) {
+            alert('Количество мест в ряду должно быть числом');
+            return;
+        }
+
+        // Основная проверка > 0
+        if (rows <= 0) {
+            alert('Количество рядов должно быть больше 0');
+            return;
+        }
+        if (places <= 0) {
+            alert('Количество мест в ряду должно быть больше 0');
+            return;
+        }
 
             const newConfig = [];
             const allRows = document.querySelectorAll('.seats-row');
