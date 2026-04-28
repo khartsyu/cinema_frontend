@@ -87,6 +87,11 @@
   border: 1px solid v.$text-annotation2;
 }
 
+.popup-text {
+  font-family: v.$font;
+  font-weight: 400;
+}
+
 .popup-actions {
   text-align: center;
   margin-top: 34px;

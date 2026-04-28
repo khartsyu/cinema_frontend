@@ -254,7 +254,7 @@
             </div>
 
             <div class="config-form__actions">
-              <button class="button button--cancel">Отмена</button>
+              <button class="button button--cancel popup-cancel">Отмена</button>
               <button class="button">Сохранить</button>
             </div>
           </div>
@@ -273,11 +273,11 @@
               <span class="config-form__label">Выберите зал для конфигурации:</span>
               <div class="hall-radio">
                 <label class="hall-radio__item">
-                  <input type="radio" name="hallConfig" value="1" checked class="hall-radio__input">
+                  <input type="radio" name="priceConfig" value="1" checked class="hall-radio__input">
                   <span class="hall-radio__text">Зал 1</span>
                 </label>
                 <label class="hall-radio__item">
-                  <input type="radio" name="hallConfig" value="2" class="hall-radio__input">
+                  <input type="radio" name="priceConfig" value="2" class="hall-radio__input">
                   <span class="hall-radio__text">Зал 2</span>
                 </label>
               </div>
@@ -312,7 +312,7 @@
             </div>
 
             <div class="config-form__actions">
-              <button class="button button--cancel">Отмена</button>
+              <button class="button button--cancel popup-cancel">Отмена</button>
               <button class="button">Сохранить</button>
             </div>
           </div>
@@ -401,7 +401,7 @@
           </div>
 
           <div class="timeline-actions">
-            <button class="button button--cancel">Отмена</button>
+            <button class="button button--cancel popup-cancel">Отмена</button>
             <button class="button">Сохранить</button>
           </div>
         </div>
@@ -455,7 +455,7 @@
         </div>
         <div class="popup-actions">
           <button class="button" id="submitHallBtn">Добавить зал</button>
-          <button class="button button--cancel" data-popup="hall">Отменить</button>
+          <button class="button button--cancel popup-cancel" data-popup="hall">Отменить</button>
         </div>
       </div>
     </div>
@@ -491,7 +491,7 @@
         <div class="popup-actions">
           <button class="button" id="submitFilmBtn">Добавить фильм</button>
           <button class="button" id="uploadPosterBtn">Загрузить постер</button>
-          <button class="button button--cancel" data-popup="film">Отменить</button>
+          <button class="button button--cancel popup-cancel" data-popup="film">Отменить</button>
         </div>
       </div>
     </div>
@@ -526,7 +526,27 @@
         </div>
         <div class="popup-actions">
           <button class="button" id="submitSeanceBtn">Добавить сеанс</button>
-          <button class="button button--cancel" data-popup="seance">Отмена</button>
+          <button class="button button--cancel popup-cancel" data-popup="seance">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Popup подтверждения удаления -->
+  <div class="popup-overlay" id="popupConfirmOverlay" style="display: none;">
+    <div class="popup-container">
+      <div class="popup-header">
+        <h3 class="popup-title">Подтверждение удаления</h3>
+        <button class="popup-close" data-popup="seance">
+          <img src="image/close.png" alt="крестик закрыть блок">
+        </button>
+      </div>
+      <div class="popup-body">
+        <p class="popup-text" id="confirmMessage">Вы действительно хотите удалить сеанс?</p>
+        <div class="popup-actions">
+          <button class="button button--cancel confirm-cancel">Отмена</button>
+          <button class="button confirm-ok">Удалить</button>
         </div>
       </div>
     </div>

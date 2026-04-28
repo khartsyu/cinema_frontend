@@ -894,6 +894,44 @@ legend {
   text-align: center;
 }
 
+.trash-bin {
+  position: absolute;
+  left: -50px;
+  top: 30%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  cursor: grab;
+}
+.trash-bin.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.trash-bin.drag-over {
+  transform: scale(1.1);
+}
+.trash-bin.drag-over .trash-bin__icon {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(2000%) hue-rotate(345deg);
+}
+.trash-bin .trash-bin__icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 0.2s ease;
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -982,6 +1020,11 @@ legend {
   font-size: 16px;
   background-color: #FFFFFF;
   border: 1px solid #757575;
+}
+
+.popup-text {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
 }
 
 .popup-actions {

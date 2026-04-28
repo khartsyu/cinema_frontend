@@ -100,3 +100,45 @@
 .timeline-actions {
   text-align: center;
 }
+
+// Корзина для удаления сеансов
+.trash-bin {
+  position: absolute;
+  left: -50px;
+  top: 30%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  cursor: grab;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.drag-over {
+    transform: scale(1.1);
+
+    .trash-bin__icon {
+      filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(2000%) hue-rotate(345deg);
+    }
+  }
+
+  .trash-bin__icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+    transition: all 0.2s ease;
+  }
+}
